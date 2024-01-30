@@ -41,6 +41,15 @@
 /data/vendor/mac_addr(/.*)? u:object_r:vendor_mac_vendor_data_file:s0
 /vendor/bin/nv_mac u:object_r:vendor_wcnss_service_exec:s0
 
+# Mlipay
+/(vendor|system/vendor)/bin/mlipayd@1.1 u:object_r:hal_mlipay_default_exec:s0
+
+# Modem
+/dev/smd8 u:object_r:vendor_radio_smd_device:s0
+
+# Perfmgr
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.xiaomi-libperfmgr    u:object_r:hal_power_default_exec:s0
+
 # Powershare
 /vendor/bin/hw/vendor\.lineage\.powershare@1\.0-service\.xiaomi u:object_r:hal_lineage_powershare_default_exec:s0
 
