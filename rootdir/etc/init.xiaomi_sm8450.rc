@@ -169,6 +169,9 @@ on property:sys.boot_completed=1
     # Set thermal mode to mgame
     write /sys/devices/virtual/thermal/thermal_message/sconfig 20
 
+# Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
+    
 on property:init.svc.vendor.charger=running
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel1-backlight/brightness
@@ -245,9 +248,6 @@ service vendor.nv_mac /vendor/bin/nv_mac
     user system
     group system inet net_admin wifi net_raw
     oneshot
-
-# Enable suspend to RAM
-    write /sys/power/mem_sleep "deep"
 
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
