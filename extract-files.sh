@@ -79,6 +79,9 @@ function blob_fixup() {
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
             sed -ni '/dolby/!p' "${2}"
             ;;
+        system_ext/etc/seccomp_policy/tcmd.policy)
+            echo 'madvise: 1' >> ${2}
+            ;;
     esac
 }
 
