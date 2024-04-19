@@ -17,11 +17,10 @@
 #define TOUCH_ID 0
 
 namespace aidl {
-namespace google {
+namespace android {
 namespace hardware {
 namespace power {
 namespace impl {
-namespace pixel {
 
 using ::aidl::android::hardware::power::Mode;
 
@@ -52,6 +51,5 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
 }  // namespace impl
 }  // namespace power
 }  // namespace hardware
-}  // namespace google
+}  // namespace android
 }  // namespace aidl
-}  // namespace pixel
