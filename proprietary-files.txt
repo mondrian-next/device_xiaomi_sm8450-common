@@ -71,6 +71,10 @@ vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
+# Charging
+vendor/bin/batterysecret
+vendor/etc/init/hw/init.batterysecret.rc
+
 # CNE
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
 vendor/bin/cnd
@@ -512,6 +516,9 @@ vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
+
+# Media (Dolby)
+vendor/etc/dolby_vision.cfg
 
 # Mlipay
 vendor/bin/mlipayd@1.1
