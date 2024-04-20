@@ -355,6 +355,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0.vendor \
+    android.hardware.thermal@2.0.vendor
+    
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.xiaomi-multihal
