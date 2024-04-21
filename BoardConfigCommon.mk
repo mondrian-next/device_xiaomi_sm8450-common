@@ -202,6 +202,7 @@ TARGET_BOARD_PLATFORM := taro
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
+TARGET_USES_VULKAN = true
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
