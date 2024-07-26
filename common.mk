@@ -133,9 +133,26 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8450/display/config/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
 
-# Dolby
+# Dolby Props
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
+    ro.vendor.audio.dolby.dax.version=DAX3_3.6 \
+    ro.vendor.audio.dolby.dax.support=true \
+    ro.vendor.audio.dolby.surround.enable=true
+
+# Dolby Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/dolby/permissions/privapp-com.dolby.daxappui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-com.dolby.daxappui.xml \
+    $(LOCAL_PATH)/dolby/permissions/privapp-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-com.dolby.daxservice.xml
+
+# MiSound
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.audio.misound.disable=true \
+    ro.vendor.audio.misound.bluetooth.enable=true
+
+# Remove Packages for Dolby Support
 PRODUCT_PACKAGES += \
-    XiaomiDolby
+    RemovePackagesDolby
 
 # DRM
 PRODUCT_PACKAGES += \
